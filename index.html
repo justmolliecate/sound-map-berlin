@@ -17,6 +17,14 @@
 margin: -10px;
 /*Your CSS here for styling*/
 }
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    font-size: small;
+    font-family: sans-serif;
+    background: #222;
+    color: #f4f4f4;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+}
 	</style>
 
 </head>
@@ -57,7 +65,7 @@ var popup =
 				iconUrl: 'water.svg',
 				iconSize:     [60, 40], // size of the icon
 				iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-				popupAnchor:  [0, -35] 
+				popupAnchor:  [0, -35]
 		});
 
 		var popup =
