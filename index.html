@@ -38,7 +38,7 @@ margin: -10px;
 <script>
 
 	var map = L.map('mapid').setView([52.520353,
-          13.406038], 11.5);
+          13.406038], 12);
 
 	L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -46,216 +46,198 @@ margin: -10px;
 	maxZoom: 19
 	}).addTo(map);
 
-  var meIcon = L.icon({
-    iconUrl: 'hplatz.svg',
+
+//Hermannplatz free palestine protest
+var meIcon = L.icon({
+    iconUrl: 'icons/hplatz.svg',
     iconSize:     [30, 20], // size of the icon
     iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
     popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-});
+	});
 
 var popup =
-"<h1>Hermannplatz</h1><p>Free palenstine protest on Hermannplatz on April 19</p><video width=320 height=240 controls><source src='herm.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-    L.marker([52.487222, 13.424722], {
+"<h1>Hermannplatz</h1><p>Free palenstine protest on Hermannplatz on April 19</p><video width=320 height=240 controls><source src='videos/herm-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+			L.marker([52.487222, 13.424722], {
 				icon:meIcon
 			}).addTo(map).bindPopup(popup);
 
 
-			var meIcon1 = L.icon({
-				iconUrl: 'water.svg',
-				iconSize:     [30, 20], // size of the icon
-				iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-				popupAnchor:  [0, -35]
-		});
+// Water flowing through japanese garden
+var meIcon1 = L.icon({
+		iconUrl: 'icons/water.svg',
+		iconSize:     [30, 20], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35]
+	});
 
-		var popup =
-		"<h1>Garten der welt</h1><p>Water flowing in the Japanese garden in the Garten der Welt</p><video width=320 height=240 controls><source src='gw.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+var popup =
+"<h1>Garten der welt</h1><p>Water flowing in the Japanese garden in the Garten der Welt</p><video width=320 height=240 controls><source src='videos/gw-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+			L.marker([52.537321, 13.571663], {
+				icon:meIcon1
+			}).addTo(map).bindPopup(popup);
 
-				L.marker([52.537321, 13.571663], {
-						icon:meIcon1
-					}).addTo(map).bindPopup(popup);
 
-					var meIcon2 = L.icon({
-						iconUrl: 's-bahn.svg',
-						iconSize:     [30, 20], // size of the icon
-						iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-						popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-				});
+// Ringbahn sounds
+var meIcon2 = L.icon({
+		iconUrl: 'icons/s-bahn.svg',
+		iconSize:     [30, 20], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
 
-				var popup =
-				"<h1>Ringbahn</h1><p>The S-41 nach SudKruez</p><video width=320 height=240 controls><source src='ring.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+var popup =
+	"<h1>Ringbahn</h1><p>The S-41 nach SudKruez</p><video width=320 height=240 controls><source src='videos/ring-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+			L.marker([52.488428, 13.34031], {
+				icon:meIcon2
+			}).addTo(map).bindPopup(popup);
 
-						L.marker([52.488428, 13.34031], {
-								icon:meIcon2
-							}).addTo(map).bindPopup(popup);
 
-							var meIcon2 = L.icon({
-								iconUrl: 'amusement.svg',
-								iconSize:     [30, 20],iconSize:     [30, 20], // size of the icon
-								iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-								popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-						});
-
-						var popup =
-						"<h1>Carousel at Alexanderplatz</h1><p>Market at Alexanderplatz</p><video width=320 height=240 controls><source src='alexanderplatz.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-								L.marker([52.522024, 13.413062], {
-										icon:meIcon2
-									}).addTo(map).bindPopup(popup);
-
-									var meIcon2 = L.icon({
-										iconUrl: 'bike.svg',
-										iconSize:     [30, 20], // size of the icon
-										iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-										popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+// bike festival at Tempelhof
+var meIcon2 = L.icon({
+		iconUrl: 'icons/bike.svg',
+		iconSize:     [30, 20], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
 								});
 
-								var popup =
-								"<h1>VELOBerlin Bicycle Festival</h1><p>Annual bicycle race and festival that takes place at Tempelhof Airport. (bg info on templehof)</p><video width=320 height=240 controls><source src='bike.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-										L.marker([52.479358, 13.394179], {
-												icon:meIcon2
-											}).addTo(map).bindPopup(popup);
-
-											var meIcon2 = L.icon({
-												iconUrl: 'drums.svg',
-												iconSize:     [40, 25], // size of the icon
-												iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-												popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-										});
-
-										var popup =
-										"<h1>Drummer in Alexanderplatz</h1><p>Berlin is home to a large number of street musicians. Check out <a href='https://kcrwberlin.com/2019/04/street-sounds-of-berlin-ukrainian-duo-igor-and-anton-dream-of-a-musical-future'>this series from KCRW Berlin</a> for more.</p><video width=320 height=240 controls><source src='drumming.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-												L.marker([52.521029, 13.412289], {
-														icon:meIcon2
-													}).addTo(map).bindPopup(popup);
-
-													var meIcon2 = L.icon({
-														iconUrl: 'ferry.svg',
-														iconSize:     [40, 25], // size of the icon
-														iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-														popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-												});
-
-												var popup =
-												"<h1>Flussbad Berlin river cleaning</h1><p>Flussbad berlin river cleaning is a 2017 initiative to test and help start cleaning the rivers in Berlin.</p><video width=320 height=240 controls><source src='fluss.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-														L.marker([52.514281, 13.401339], {
-																icon:meIcon2
-															}).addTo(map).bindPopup(popup);
-
-															var meIcon2 = L.icon({
-																iconUrl: 'footprints.svg',
-																iconSize:     [40, 25], // size of the icon
-																iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-														});
-
-														var popup =
-														"<h1>Street Musicians on May Day</h1><p>Random collection of musicians, out on May day.</p><video width=320 height=240 controls><source src='hillbillies.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																L.marker([52.503313, 13.411837], {
-																		icon:meIcon2
-																	}).addTo(map).bindPopup(popup);
+var popup =
+	"<h1>VELOBerlin Bicycle Festival</h1><p>Annual bicycle race and festival that takes place at Tempelhof Airport. (bg info on templehof)</p><video width=320 height=240 controls><source src='videos/bike-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.479358, 13.394179], {
+						icon:meIcon2
+				}).addTo(map).bindPopup(popup);
 
 
+var meIcon2 = L.icon({
+		iconUrl: 'icons/drums.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
 
-																	var meIcon2 = L.icon({
-																		iconUrl: 'singer.svg',
-																		iconSize:     [40, 25], // size of the icon
-																		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																});
-
-																var popup =
-																"<h1>Singer performing on May Day in Kreuzberg</h1><p>Singer performing on May Day.</p><video width=320 height=240 controls><source src='kreuz-music.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																		L.marker([52.502998, 13.415710], {
-																				icon:meIcon2
-																			}).addTo(map).bindPopup(popup);
+var popup =
+	"<h1>Drummer in Alexanderplatz</h1><p>Berlin is home to a large number of street musicians. Check out <a href='https://kcrwberlin.com/2019/04/street-sounds-of-berlin-ukrainian-duo-igor-and-anton-dream-of-a-musical-future'>this series from KCRW Berlin</a> for more.</p><video width=320 height=240 controls><source src='videos/drum-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.521029, 13.412289], {
+					icon:meIcon2
+				}).addTo(map).bindPopup(popup);
 
 
-																	var meIcon2 = L.icon({
-																				iconUrl: 'demonstrate.svg',
-																				iconSize:     [40, 25], // size of the icon
-																				iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																				popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																		});
+// Flussbad Berlin
+var meIcon2 = L.icon({
+		iconUrl: 'icons/ferry.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
 
-																		var popup =
-																		"<h1>Erste Mai</h1><p>explaination of erste Mai in Berlin</p><video width=320 height=240 controls><source src='may-day.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																				L.marker([52.499892, 13.428010], {
-																						icon:meIcon2
-																					}).addTo(map).bindPopup(popup);
-
-
-																			var meIcon2 = L.icon({
-																								iconUrl: 'home.svg',
-																								iconSize:     [40, 25], // size of the icon
-																								iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																								popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																						});
-
-																						var popup =
-																						"<h1>Construction</h1><p>Berlin is under a constant state of construction</p><video width=320 height=240 controls><source src='plastic.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																								L.marker([52.519578, 13.397490], {
-																										icon:meIcon2
-																									}).addTo(map).bindPopup(popup);
+var popup =
+	"<h1>Flussbad Berlin river cleaning</h1><p>Flussbad berlin river cleaning is a 2017 initiative to test and help start cleaning the rivers in Berlin.</p><video width=320 height=240 controls><source src='videos/fluss-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.514281, 13.401339], {
+					icon:meIcon2
+				}).addTo(map).bindPopup(popup);
 
 
+// Musicians on May day
+var meIcon2 = L.icon({
+		iconUrl: 'icons/footprints.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
 
-																							var meIcon2 = L.icon({
-																														iconUrl: 'bird.svg',
-																														iconSize:     [40, 25], // size of the icon
-																														iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																														popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																												});
-
-																												var popup =
-																												"<h1>Treptower Park</h1><p>Treptower park is home to the soviet war memorial, some info about that.</p><video width=320 height=240 controls><source src='trep.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																														L.marker([52.486992, 13.472464], {
-																																icon:meIcon2
-																															}).addTo(map).bindPopup(popup);
-
+var popup =
+		"<h1>Street Musicians on May Day</h1><p>Random collection of musicians, out on May day.</p><video width=320 height=240 controls><source src='videos/hillbillies-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+					L.marker([52.503313, 13.411837], {
+						icon:meIcon2
+					}).addTo(map).bindPopup(popup);
 
 
-																															var meIcon2 = L.icon({
-																																						iconUrl: 'gate.svg',
-																																						iconSize:     [40, 25], // size of the icon
-																																						iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																																						popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																																				});
+// singer performing on may day
+var meIcon2 = L.icon({
+		iconUrl: 'icons/singer.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
 
-																																var popup =
-																																"<h1>Brandenburg Gate</h1><p>There is always something new going on at the Brandenburg Gate. On this day, a Ukranian woman was play --- info</p><video width=320 height=240 controls><source src='ukraine.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																																		L.marker([52.516261, 13.377607], {
-																																					icon:meIcon2
-																																				}).addTo(map).bindPopup(popup);
-
-																																				var meIcon2 = L.icon({
-																																											iconUrl: 'tree.svg',
-																																											iconSize:     [40, 25], // size of the icon
-																																											iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
-																																											popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
-																																									});
-
-																																					var popup =
-																																					"<h1>Tiergarten</h1><p>Tiergarten is one of the biggest parks in berlin, it's important because: </p><video width=320 height=240 controls><source src='tier.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
-
-																																							L.marker([52.512764, 13.352487], {
-																																										icon:meIcon2
-																																									}).addTo(map).bindPopup(popup);
+var popup =
+	"<h1>Singer performing on May Day in Kreuzberg</h1><p>Singer performing on May Day.</p><video width=320 height=240 controls><source src='videos/sing-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.502998, 13.415710], {
+					icon:meIcon2
+				}).addTo(map).bindPopup(popup);
 
 
+//First of May
+var meIcon2 = L.icon({
+		iconUrl: 'icons/demonstrate.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
+
+var popup =
+	"<h1>Erste Mai</h1><p>explaination of erste Mai in Berlin</p><video width=320 height=240 controls><source src='videos/mayday-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.499892, 13.428010], {
+				icon:meIcon2
+			}).addTo(map).bindPopup(popup);
 
 
+//construction plastic blowing in wind
+var meIcon2 = L.icon({
+		iconUrl: 'icons/home.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
+
+var popup =
+	"<h1>Construction</h1><p>Berlin is under a constant state of construction</p><video width=320 height=240 controls><source src='videos/plastic-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.519578, 13.397490], {
+						icon:meIcon2
+				}).addTo(map).bindPopup(popup);
 
 
+//treptower sounds
+var meIcon2 = L.icon({
+		iconUrl: 'icons/bird.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
+
+var popup =
+	"<h1>Treptower Park</h1><p>Treptower park is home to the soviet war memorial, some info about that.</p><video width=320 height=240 controls><source src='videos/trep-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+				L.marker([52.486992, 13.472464], {
+					icon:meIcon2
+				}).addTo(map).bindPopup(popup);
+
+
+//Brandenburg Gate
+var meIcon2 = L.icon({
+		iconUrl: 'icons/gate.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
+
+var popup =
+		"<h1>Brandenburg Gate</h1><p>There is always something new going on at the Brandenburg Gate. On this day, a Ukranian woman was play --- info</p><video width=320 height=240 controls><source src='videos/uk-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+					L.marker([52.516261, 13.377607], {
+						icon:meIcon2
+					}).addTo(map).bindPopup(popup);
+
+
+var meIcon2 = L.icon({
+		iconUrl: 'icons/tree.svg',
+		iconSize:     [40, 25], // size of the icon
+		iconAnchor:   [30, 40], // point of the icon which will correspond to marker's location
+		popupAnchor:  [0, -35] // point from which the popup should open relative to the iconAnchor
+	});
+
+var popup =
+		"<h1>Tiergarten</h1><p>Tiergarten is one of the biggest parks in berlin, it's important because: </p><video width=320 height=240 controls><source src='videos/tier-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+					L.marker([52.512764, 13.352487], {
+						icon:meIcon2
+					}).addTo(map).bindPopup(popup);
 
 
 </script>
