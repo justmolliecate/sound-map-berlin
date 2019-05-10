@@ -33,8 +33,6 @@ margin: -10px;
 
 
 <div id="mapid" style="width: 900px; height: 750px;"></div>
-
-
 <script>
 
 	var map = L.map('mapid').setView([52.520353,
@@ -56,7 +54,7 @@ var meIcon = L.icon({
 	});
 
 var popup =
-"<h1>Hermannplatz</h1><p>The April 19, 2019 solidarity demonstration on Palestinian Prisoners’ Day in Hermannplatz, an area of Berlin with a high refugee population. It was organized by The alliance of Palestinian and Arab organizations in Berlin.</p><video width=320 height=240 controls><source src='videos/herm-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+"<h1>Hermannplatz</h1><p>The April 19, 2019 solidarity demonstration on Palestinian Prisoners’ Day in Hermannplatz, an area of Berlin with a high refugee population. It was organized by The alliance of Palestinian and Arab organizations in Berlin.</p><video width=320 height=240 controls='true' playsinline><source src='videos/herm-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
 			L.marker([52.487222, 13.424722], {
 				icon:meIcon
 			}).addTo(map).bindPopup(popup);
