@@ -13,7 +13,7 @@
 
 	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 	<style>
-	video {
+	iframe {
 margin: -10px;
 /*Your CSS here for styling*/
 }
@@ -38,6 +38,11 @@ margin: -10px;
 	var map = L.map('mapid').setView([52.520353,
           13.406038], 12);
 
+	map.on('popupclose', function (e) {
+		map.setView([52.520353,
+	          13.406038], 12);
+	})
+
 	L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 	subdomains: 'abcd',
@@ -54,7 +59,7 @@ var meIcon = L.icon({
 	});
 
 var popup =
-"<h1>Hermannplatz</h1><p>The April 19, 2019 solidarity demonstration on Palestinian Prisoners’ Day in Hermannplatz, an area of Berlin with a high refugee population. It was organized by The alliance of Palestinian and Arab organizations in Berlin.</p><video width=320 height=240 controls='true' playsinline><source src='videos/herm-1.mp4' type='video/mp4'>Your browser does not support the video tag.</video>"
+"<h1>Hermannplatz</h1><p>The April 19, 2019 solidarity demonstration on Palestinian Prisoners’ Day in Hermannplatz, an area of Berlin with a high refugee population. It was organized by The alliance of Palestinian and Arab organizations in Berlin.</p><iframe width='320' height='240' src='https://www.youtube.com/embed/d86NH_eajho' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
 			L.marker([52.487222, 13.424722], {
 				icon:meIcon
 			}).addTo(map).bindPopup(popup);
